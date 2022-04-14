@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ʕ•ᴥ•ʔ 記憶ゲーム ʕ•ᴥ•ʔ</title>
+</head>
+
+<style>
+    img {
+        position: absolute;
+    }
+
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: url(background.png) center center fixed no-repeat;
+        background-size: cover;
+    }
+
+</style>
+
+<script>
+    var a = new Audio("click.mp3");
+
+    function show_intro() {
+        a.play();
+        document.getElementById("yellow").style.display = "block";
+        document.getElementById("purple").style.display = "block";
+    }
+
+    function game_start() {
+        a.play();
+        window.location.href = "http://etech.gac.ntnu.edu.tw/cs08bj/assignments/99%20final/40872011H+40872012H%20%e7%bf%bb%e7%89%8c%e8%a8%98%e6%86%b6%e9%81%8a%e6%88%b2/GameStart.html";
+    }
+
+</script>
+
+<body>
+    <audio autoplay loop>
+        <source src="momo.mp3">
+    </audio>
+    <img src="logo.png" width="600px" style="left:42% ; top: 40%;margin-left:-150px;margin-top:-150px; z-index:0">
+    <img src="btn_start.png" width="300px" style="left: 51%; top: 70%;margin-left:-150px;margin-top:-150px; z-index:0" onclick="game_start()">
+    <img src="btn_intro.png" width="300px" style="left: 51%; top: 85%;margin-left:-150px;margin-top:-150px; z-index:0" onclick="show_intro()">
+    <img src="introduction.png" width="650" style="left:30%; top:50%; display: none; z-index:1" id="yellow">
+    <img src="btn_start_purple.png" width="220" style="left:44%; top:77%; display: none; z-index:2" onclick="game_start()" id="purple">
+
+
+</body>
+
+</html>
